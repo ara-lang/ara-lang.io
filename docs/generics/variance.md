@@ -29,8 +29,8 @@ function pet(vec<Animal> $animals): void {
 }
 
 function example(): void {
-    pet(new Box(new Cat()));
-    pet(new Box(new Dog()));
+    pet(new Box::<Cat>(new Cat()));
+    pet(new Box::<Dog>(new Dog()));
 
     pet_all(vec[new Cat(), new Cat()]);
 }
