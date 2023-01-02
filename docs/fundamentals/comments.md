@@ -6,26 +6,33 @@ Ara supports three types of comments:
 - Multi-line comments, which start with `/*` and end with `*/`.
 - Doc comments, which start with `/**` and end with `*/`.
 
-## Example
+## Single-line comments
+
+Single-line comments start with `//` and continue until the end of the line is reached.
 
 ```
-// This is a single-line comment.
+// A single-line comment on an empty line
 
+$foo = true; // A single-line comment after a statement
+```
+
+## Multi-line comments
+
+Multi-line comments (AKA block comments) start with `/*` and end with `*/`.
+
+```
 /* This is a
    multi-line comment. */
 
-/** 
- * This is a doc comment.
+/*
+ * This is another multi-line comment.
  */
 ```
 
-## Doc comments
+## Documentation comments
 
-Doc comments are used to document Ara code. They are used to generate documentation for Ara code.
-
-Doc comments are formatted using `Markdown` syntax.
-
-### Example
+Documentation comments start with `/**` and end with `*/`. They are formatted
+using the `Markdown` syntax. 
 
 ```
 /**
