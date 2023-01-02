@@ -1,0 +1,33 @@
+{
+  "name": "ara-lang.io",
+  "version": "1.0.0",
+  "description": "Website of the Ara Programming Language.",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "ara",
+    "ara-lang"
+  ],
+  "contributors": [
+    {
+      "name": "Nicolas Hedger",
+      "email": "nicolas@hedger.ch",
+      "url": "https://github.com/nhedger"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.34",
+    "vue": "^3.2.45"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  }
+}
