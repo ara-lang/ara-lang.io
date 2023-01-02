@@ -1,5 +1,6 @@
 # [ara-lang.io](https://ara-lang.io/)
 
+This repository contains the source code for ARA's documentation website.
 
 ## License
 
