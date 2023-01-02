@@ -225,8 +225,8 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: "Released under both the MIT License and the Apache License (Version 2.0).",
-      copyright: "Copyright © 2023 - The ARA programming language",
+      message: "Licensed under either of the MIT License or the Apache License (Version 2.0), at your option.",
+      copyright: "Copyright © 2022 - 2023 Saif Eddin Gmati",
     },
     editLink: {
       pattern: "https://github.com/ara-lang/ara-lang.io/edit/main/docs/:path",
