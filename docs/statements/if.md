@@ -59,7 +59,7 @@ The code above will result in the following error:
 
 ```
 error[P0042]: unexpected identifier, expected `{`
-  ┌─ examples/project/format.ara:2:21
+  ┌─ examples/if-one-line.ara:2:21
   │
 2 │     if ($condition) foo();
   │                     ^^^ unexpected identifier, expected `{`

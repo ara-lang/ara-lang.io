@@ -70,7 +70,7 @@ The code above will result in the following error:
 
 ```
 error[P0039]: try statement must have a catch or finally block
-  ┌─ examples/project/format.ara:2:5
+  ┌─ examples/try-without-catch-or-finally.ara:2:5
   │
 2 │ ╭     try {
 3 │ │         foo();

@@ -34,6 +34,32 @@ for $i = 0; $i < 10; $i++ {
 The level must be a literal integer.
 :::
 
+```
+function example(): void {
+    while $condition {
+      // ...
+
+      while $another_condition {
+          // ...
+
+          if $something {
+              break $level;
+          }
+      }
+    }
+}
+```
+
+The code above will result in the following error:
+
+```
+error[P0042]: unexpected variable, expected `;`
+  ┌─ examples/break-non-literal.ara:9:21
+  │
+9 │               break $level;
+  │                     ^^^^^^ unexpected variable, expected `;`
+```
+
 ## Continue
 
 The `continue` statement is used to skip the rest of the current iteration of a loop.
@@ -65,3 +91,29 @@ for $i = 0; $i < 10; $i++ {
 ::: warning
 The level must be a literal integer.
 :::
+
+```
+function example(): void {
+    while $condition {
+      // ...
+
+      while $another_condition {
+          // ...
+
+          if $something {
+              continue $level;
+          }
+      }
+    }
+}
+```
+
+The code above will result in the following error:
+
+```
+error[P0042]: unexpected variable, expected `;`
+  ┌─ examples/continue-non-literal.ara:9:24
+  │
+9 │               continue $level;
+  │                        ^^^^^^ unexpected variable, expected `;`
+```
