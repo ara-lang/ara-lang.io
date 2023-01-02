@@ -148,10 +148,6 @@ export default defineConfig({
             link: '/expressions/function-operations'
           },
           {
-            text: 'Array Operations',
-            link: '/expressions/array-operations'
-          },
-          {
             text: 'Exception Operations',
             link: '/expressions/exception-operations'
           },
