@@ -61,6 +61,7 @@ The list of keywords is:
 - `from`
 - `readonly`
 - `into`
+- `unset`
 
 In addition, the following keywords are reserved for historical reasons, but are not used in the current version of Ara:
 
@@ -84,4 +85,3 @@ In addition, the following keywords are reserved for historical reasons, but are
 - `list`
 - `print`
 - `switch`
-- `unset`
