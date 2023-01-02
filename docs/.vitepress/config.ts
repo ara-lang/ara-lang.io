@@ -200,7 +200,7 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: "Released under the MIT License.",
+      message: "Released under both the MIT License and the Apache License (Version 2.0).",
       copyright: "Copyright © 2023 - The ARA programming language",
     },
     editLink: {
