@@ -56,5 +56,5 @@ The `@ignore` comment can be used to ignore linting errors.
 
 ```
 // @ignore(L0515) - useless parentheses
-$foo = (1 + 2) * 3;
+$foo = 1 + (2 * 3);
 ```
