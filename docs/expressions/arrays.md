@@ -40,6 +40,22 @@ $a = (1, 2, 3);
 $b = ($a[0], $a[1], 4);
 ```
 
+### Checking if a value exists
+
+To check if a value exists in a tuple, use the `in` expression.
+
+```
+$a = (1, 2, 3);
+
+if 1 in $a {
+    // 1 exists in $a
+}
+```
+
+### Checking if a key exists
+
+Checking if a key exists in a tuple is not possible, as the length of a tuple is fixed.
+
 ### Iterating
 
 Tuples can be iterated over using the `foreach` statement.
@@ -109,9 +125,53 @@ $a = vec[1, 2, 3];
 unset $a[0];
 ```
 
-::: info
+::: warning
 When removing a value from a vector, the vector will be re-indexed. This means that the index of the last value in the vector will change.
 :::
+
+::: info
+Parentheses can be used with `unset` to mimic `unset()` in PHP.
+:::
+
+```
+$a = vec[1, 2, 3];
+
+unset($a[0]);
+```
+
+::: info
+You can `unset` multiple values from a vector by separating them with commas.
+:::
+
+```
+$a = vec[1, 2, 3];
+
+unset $a[0], $a[1];
+```
+
+### Checking if a value exists
+
+To check if a value exists in a vector, use the `in` expression.
+
+```
+$a = vec[1, 2, 3];
+
+if 1 in $a {
+    // 1 exists in $a
+}
+```
+
+### Checking if a key exists
+
+To check if a key exists in a vector, use the `isset` expression.
+
+```
+$a = vec[1, 2, 3];
+
+if isset $a[0] {
+    // 0 exists in $a
+}
+```
 
 ### Iterating
 
@@ -170,6 +230,50 @@ To remove a value from a dictionary, use the `unset` expression.
 $a = dict["a" => 1, "b" => 2, "c" => 3];
 
 unset $a["a"];
+```
+
+::: info
+Parentheses can be used with `unset` to mimic `unset()` in PHP.
+:::
+
+```
+$a = dict["a" => 1, "b" => 2, "c" => 3];
+
+unset($a["a"]);
+```
+
+::: info
+You can `unset` multiple values from a dictionary by separating them with commas.
+:::
+
+```
+$a = dict["a" => 1, "b" => 2, "c" => 3];
+
+unset $a["a"], $a["b"];
+```
+
+### Checking if a value exists
+
+To check if a value exists in a dictionary, use the `in` expression.
+
+```
+$a = dict["a" => 1, "b" => 2, "c" => 3];
+
+if 1 in $a {
+    // 1 exists in $a
+}
+```
+
+### Checking if a key exists
+
+To check if a key exists in a dictionary, use the `isset` expression.
+
+```
+$a = dict["a" => 1, "b" => 2, "c" => 3];
+
+if isset $a["a"] {
+    // "a" exists in $a
+}
 ```
 
 ### Iterating
