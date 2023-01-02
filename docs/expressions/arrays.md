@@ -101,7 +101,7 @@ $a = vec[1, 2, 3];
 $a[] = 4;
 ```
 
-To remove a value from a vector, use the `unset` statement.
+To remove a value from a vector, use the `unset` expression.
 
 ```
 $a = vec[1, 2, 3];
@@ -164,7 +164,7 @@ $a = dict["a" => 1, "b" => 2, "c" => 3];
 $a["d"] = 4;
 ```
 
-To remove a value from a dictionary, use the `unset` statement.
+To remove a value from a dictionary, use the `unset` expression.
 
 ```
 $a = dict["a" => 1, "b" => 2, "c" => 3];
