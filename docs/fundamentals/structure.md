@@ -18,7 +18,15 @@ Every Ara file can contain zero or more top-level declarations. The top-level de
 ```
 namespace MyNamespace;
 
-use MyOtherNamespace\MyClass;
+use MyOtherNamespace\MyOtherClass;
+
+use function MyOtherNamespace\my_other_function;
+
+use const MyOtherNamespace\MY_OTHER_CONST;
+
+const MY_CONST = 1;
+
+type MyType = int;
 
 interface MyInterface {
     // ...
@@ -32,11 +40,7 @@ enum MyEnum {
     // ...
 }
 
-const MY_CONST = 1;
-
-type MyType = int;
-
-function myFunction(): void {
+function my_function(): void {
     // ...
 }
 ```
