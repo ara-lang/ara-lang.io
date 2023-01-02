@@ -4,7 +4,7 @@ Identifiers are used to label variables, constants, functions, classes, interfac
 
 An identifier must start with a character from the unicode character set, or an underscore (`_`), followed by zero or more characters from the unicode character set, or digits (`0`-`9`).
 
-variables, and class properties names must start be preceded with a `$` sign. 
+variables, and class properties names must start with a `$` sign. 
 
 ## Examples
 
