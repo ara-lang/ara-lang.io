@@ -11,7 +11,7 @@ The following scopes are defined:
 
 Each function has its own scope. A variable declared in a function is only visible within that function.
 
-Anonymouse functions have their own scope. A variable declared in an anonymous function is only visible within that function, however, an anonymous function can import variables from the parent scope.
+Anonymous functions have their own scope. A variable declared in an anonymous function is only visible within that function, however, an anonymous function can import variables from the parent scope.
 
 The scope of a parameter is the scope of the function in which the parameter is declared.
 
