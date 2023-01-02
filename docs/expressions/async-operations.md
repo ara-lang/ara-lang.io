@@ -54,3 +54,24 @@ concurrently {
     some_other_operation(),
 }
 ```
+
+The result of the `concurrently` block is a tuple of the results of the async operations.
+
+```
+// $result: (int, string)
+$result = concurrently {
+    await return_int_after_some_work(),
+    await return_string_after_some_work(),
+};
+```
+
+The result can be spread into a tuple of variables.
+
+```
+// $a: int
+// $b: string
+($a, $b) = concurrently {
+    await return_int_after_some_work(),
+    await return_string_after_some_work(),
+};
+```

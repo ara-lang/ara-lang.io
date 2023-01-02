@@ -34,7 +34,7 @@ $foo = $bar / $baz;
 
 ## Modulus
 
-Modulus can be used to get the modulus of two values using the `%` operator, followed by the value to get the modulus from the left.
+Modulus can be used to get the remainder of two values using the `%` operator, followed by the value to divide from the left.
 
 ```
 $foo = $bar % $baz;
