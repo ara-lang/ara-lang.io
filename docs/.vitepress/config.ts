@@ -197,6 +197,31 @@ export default defineConfig({
             link: '/classes/properties'
           },
         ]
+      },
+      {
+        text: 'Generics',
+        items: [
+          {
+            text: 'Introduction',
+            link: '/generics/introduction'
+          },
+          {
+            text: 'Type Parameters',
+            link: '/generics/type-parameters'
+          },
+          {
+            text: 'Type Constraints',
+            link: '/generics/type-constraints'
+          },
+          {
+            text: 'Variance',
+            link: '/generics/variance'
+          },
+          {
+            text: 'Type Erasure',
+            link: '/generics/type-erasure'
+          }
+        ]
       }
     ],
     footer: {
