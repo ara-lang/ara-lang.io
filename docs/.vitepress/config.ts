@@ -59,6 +59,43 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Statements',
+        items: [
+          {
+            text: 'If',
+            link: '/statements/if'
+          },
+          {
+            text: 'For',
+            link: '/statements/for'
+          },
+          {
+            text: 'While',
+            link: '/statements/while'
+          },
+          {
+            text: 'Do While',
+            link: '/statements/do-while'
+          },
+          {
+            text: 'Foreach',
+            link: '/statements/foreach'
+          },
+          {
+            text: 'Return',
+            link: '/statements/return'
+          },
+          {
+            text: 'Break And Continue',
+            link: '/statements/break-and-continue'
+          },
+          {
+            text: 'Try Catch',
+            link: '/statements/try-catch'
+          },
+        ]
+      },
+      {
         text: 'Expressions',
         items: [
           {

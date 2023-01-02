@@ -34,8 +34,6 @@ The list of keywords is:
 - `const`
 - `return`
 - `yield`
-- `list`
-- `switch`
 - `default`
 - `break`
 - `extends`
@@ -46,7 +44,6 @@ The list of keywords is:
 - `case`
 - `elseif`
 - `class`
-- `unset`
 - `isset`
 - `parent`
 - `static`
@@ -86,3 +83,5 @@ In addition, the following keywords are reserved for historical reasons, but are
 - `goto`
 - `list`
 - `print`
+- `switch`
+- `unset`
