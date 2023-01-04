@@ -5,6 +5,7 @@ export default defineConfig({
   title: "ARA Programming Language",
   description:
     "A powerful, statically typed programming language that compiles directly to PHP.",
+  lastUpdated: true,
   themeConfig: {
     siteTitle: 'ARA Language',
     sidebar: [
@@ -19,6 +20,8 @@ export default defineConfig({
       },
       {
         text: 'Fundamentals',
+        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: 'Structure',
@@ -60,6 +63,8 @@ export default defineConfig({
       },
       {
         text: 'Classes',
+        collapsible: true,
+        collapsed: true,
         items: [
           {
             text: 'Introduction',
@@ -89,6 +94,8 @@ export default defineConfig({
       },
       {
         text: 'Statements',
+        collapsible: true,
+        collapsed: true,
         items: [
           {
             text: 'If',
@@ -126,6 +133,8 @@ export default defineConfig({
       },
       {
         text: 'Expressions',
+        collapsible: true,
+        collapsed: true,
         items: [
           {
             text: 'Arithmetic Operations',
@@ -208,6 +217,8 @@ export default defineConfig({
       },
       {
         text: 'Generics',
+        collapsible: true,
+        collapsed: true,
         items: [
           {
             text: 'Introduction',
