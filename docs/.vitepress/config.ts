@@ -21,7 +21,7 @@ export default defineConfig({
       {
         text: 'Fundamentals',
         collapsible: true,
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: 'Structure',
