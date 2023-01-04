@@ -102,6 +102,14 @@ export default defineConfig({
             link: '/statements/if'
           },
           {
+            text: 'Using',
+            link: '/statements/using'
+          },
+          {
+            text: 'Foreach',
+            link: '/statements/foreach'
+          },
+          {
             text: 'For',
             link: '/statements/for'
           },
@@ -114,20 +122,16 @@ export default defineConfig({
             link: '/statements/do-while'
           },
           {
-            text: 'Foreach',
-            link: '/statements/foreach'
-          },
-          {
-            text: 'Return',
-            link: '/statements/return'
-          },
-          {
             text: 'Break And Continue',
             link: '/statements/break-and-continue'
           },
           {
             text: 'Try Catch',
             link: '/statements/try-catch'
+          },
+          {
+            text: 'Return',
+            link: '/statements/return'
           },
         ]
       },
