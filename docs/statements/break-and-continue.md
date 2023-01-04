@@ -32,7 +32,6 @@ for $i = 0; $i < 10; $i++ {
 
 ::: warning
 The level must be a literal integer.
-:::
 
 ```
 function example(): void {
@@ -59,6 +58,7 @@ error[P0042]: unexpected variable, expected `;`
 9 │               break $level;
   │                     ^^^^^^ unexpected variable, expected `;`
 ```
+:::
 
 ## Continue
 
@@ -90,7 +90,6 @@ for $i = 0; $i < 10; $i++ {
 
 ::: warning
 The level must be a literal integer.
-:::
 
 ```
 function example(): void {
@@ -117,3 +116,4 @@ error[P0042]: unexpected variable, expected `;`
 9 │               continue $level;
   │                        ^^^^^^ unexpected variable, expected `;`
 ```
+:::

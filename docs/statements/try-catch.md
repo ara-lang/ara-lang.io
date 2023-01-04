@@ -56,7 +56,6 @@ try {
 
 ::: warning
 A `try` statement must have at least one `catch` or `finally` block.
-:::
 
 ```
 function example(): void {
@@ -79,3 +78,4 @@ error[P0039]: try statement must have a catch or finally block
   │
   = help: try adding a catch or finally block.
 ```
+:::

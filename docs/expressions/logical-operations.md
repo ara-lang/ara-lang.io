@@ -23,4 +23,3 @@ Logical not can be used to evaluate an expression using the `!` operator.
 ```
 $foo = !$bar;
 ```
-

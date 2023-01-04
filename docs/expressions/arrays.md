@@ -52,9 +52,9 @@ if 1 in $a {
 }
 ```
 
-### Checking if a key exists
+### Checking if an index exists
 
-Checking if a key exists in a tuple is not possible, as the length of a tuple is fixed.
+Checking if an index exists in a tuple is not possible, as the length of a tuple is fixed.
 
 ### Iterating
 
@@ -66,7 +66,16 @@ $a = (1, 2, 3);
 foreach $a as $value {
     // $value is 1, then 2, then 3
 }
+
+foreach $a as $index => $value {
+    // $index is 0, then 1, then 2
+    // $value is 1, then 2, then 3
+}
 ```
+
+::: warning
+Unlike PHP, `$index`, and `$value` are not available after the `foreach` statement.
+:::
 
 ## Vectors
 
@@ -140,13 +149,13 @@ unset($a[0]);
 ```
 
 ::: info
-You can `unset` multiple values from a vector by separating them with commas.
+You can remove multiple indexes from a vector by passing a tuple of indexes to `unset`.
 :::
 
 ```
 $a = vec[1, 2, 3];
 
-unset $a[0], $a[1];
+unset ($a[0], $a[1]);
 ```
 
 ### Checking if a value exists
@@ -161,15 +170,39 @@ if 1 in $a {
 }
 ```
 
-### Checking if a key exists
+### Checking if an index exists
 
-To check if a key exists in a vector, use the `isset` expression.
+To check if an index exists in a vector, use the `isset` expression.
 
 ```
 $a = vec[1, 2, 3];
 
 if isset $a[0] {
     // 0 exists in $a
+}
+```
+
+::: info
+Parentheses can be used with `isset` to mimic `isset()` in PHP.
+:::
+
+```
+$a = vec[1, 2, 3];
+
+if isset($a[0]) {
+    // 0 exists in $a
+}
+```
+
+::: info
+You can check if multiple indexes exist in a vector by passing a tuple of indexes to `isset`.
+:::
+
+```
+$a = vec[1, 2, 3];
+
+if isset ($a[0], $a[1]) {
+    // 0 and 1 exist in $a
 }
 ```
 
@@ -183,7 +216,16 @@ $a = vec[1, 2, 3];
 foreach $a as $value {
     // $value is 1, then 2, then 3
 }
+
+foreach $a as $index => $value {
+    // $index is 0, then 1, then 2
+    // $value is 1, then 2, then 3
+}
 ```
+
+::: warning
+Unlike PHP, `$index`, and `$value` are not available after the `foreach` statement.
+:::
 
 ### Dictionary
 
@@ -232,26 +274,6 @@ $a = dict["a" => 1, "b" => 2, "c" => 3];
 unset $a["a"];
 ```
 
-::: info
-Parentheses can be used with `unset` to mimic `unset()` in PHP.
-:::
-
-```
-$a = dict["a" => 1, "b" => 2, "c" => 3];
-
-unset($a["a"]);
-```
-
-::: info
-You can `unset` multiple values from a dictionary by separating them with commas.
-:::
-
-```
-$a = dict["a" => 1, "b" => 2, "c" => 3];
-
-unset $a["a"], $a["b"];
-```
-
 ### Checking if a value exists
 
 To check if a value exists in a dictionary, use the `in` expression.
@@ -288,3 +310,7 @@ foreach $a as $key => $value {
     // $value is 1, then 2, then 3
 }
 ```
+
+::: warning
+Unlike PHP, `$index`, and `$value` are not available after the `foreach` statement.
+:::

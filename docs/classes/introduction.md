@@ -14,7 +14,7 @@ class Example {
 }
 ```
 
-### Instantiating a class
+## Instantiation
 
 To create an instance of a class, use the `new` keyword followed by the name of the class.
 
@@ -23,3 +23,5 @@ function main(): void {
     $counter = new Example();
 }
 ```
+
+Refer to [Expressions: Class Operations - Instantiation](../expressions/class-operations.md#instantiation) for more information.

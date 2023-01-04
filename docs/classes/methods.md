@@ -10,12 +10,39 @@ class Counter {
 }
 ```
 
-To call an instance method, use `->` operator.
+## Method Calls
+
+Refer to [Expressions: Object Operations - Method Calls](../expressions/object-operations.md#method-calls) for more information.
+
+## Method Visibility
+
+A method can be declared as `public`, `protected`, or `private`.
 
 ```
-function main(): void {
-    $counter = new Counter();
-    $counter->increment();
+class Counter {
+    public function increment(): void {
+        // ...
+    }
+
+    protected function decrement(): void {
+        // ...
+    }
+
+    private function reset(): void {
+        // ...
+    }
+}
+```
+
+## Final Methods
+
+A method can be declared as `final`, which means that it cannot be overridden in a child class.
+
+```
+class Counter {
+    final public function increment(): void {
+        // ...
+    }
 }
 ```
 
@@ -38,3 +65,7 @@ function main(): void {
     Counter::increment();
 }
 ```
+
+## Static Method Calls
+
+Refer to [Expressions: Class Operations - Static Method Calls](../expressions/class-operations.md#static-method-calls) for more information.

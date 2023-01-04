@@ -9,23 +9,13 @@ class Counter
 }
 ```
 
-To access a property, use `->` operator.
-
-```
-function main(): void {
-    $counter = new Counter();
-    $counter->value = 1;
-}
-```
-
-::: info
-There's no `$` sign before the property name.
-:::
-
 ::: info
 Every instance has a separate value for an instance property.
 :::
 
+## Property Access
+
+Refer to [Expressions: Object Operations - Property Access](../expressions/object-operations.md#property-access) for more information.
 
 ## Initializing Properties
 
@@ -44,6 +34,53 @@ class SetInConstructor {
     }
 }
 ```
+
+## Property Visibility
+
+A property can be declared as `public`, `protected`, or `private`.
+
+```
+class Counter {
+    public int $value = 0;
+    protected int $value = 0;
+    private int $value = 0;
+}
+```
+
+## Read-only Properties
+
+A property can be declared as `readonly`.
+
+```
+class Counter {
+  public readonly int $value = 0;
+}
+```
+
+::: warning
+Unlike other properties, a read-only property cannot be initialized with a default value.
+
+```
+class Counter {
+    public readonly int $value = 0;
+}
+```
+
+The code above will result in the following error:
+
+```
+error[P0018]: readonly property `Counter::$value` cannot have a default value
+  ┌─ examples/readonly-with-value.ara:3:23
+  │
+1 │ class Counter {
+  │       -------
+2 │   public readonly int $value = 0;
+  │          --------     ^^^^^^^^^^ readonly property `Counter::$value` cannot have a default value
+  │
+  = note: a readonly property cannot have a default value because it cannot be changed after initialization.
+  = help: try removing the default value.
+```
+:::
 
 ## Static properties
 
@@ -67,6 +104,37 @@ function main(): void {
 If your property never changes value, you might want to use a class constant instead.
 :::
 
+::: warning
+A static property cannot be declared as `readonly`.
+
+```
+class Counter {
+    public static readonly int $value;
+}
+```
+
+The code above will result in the following error:
+
+```
+error[P0017]: readonly property `Counter::$value` cannot be static
+  ┌─ examples/static-readonly-property.ara:2:12
+  │
+1 │ class Counter {
+  │       -------
+2 │     public static readonly int $value;
+  │            ^^^^^^ --------     ------
+  │            │
+  │            readonly property `Counter::$value` cannot be static
+  │
+  = note: a property cannot be both readonly and static.
+  = help: try removing `static`.
+```
+:::
+
+## Static Property Access
+
+Refer to [Expressions: Class Operations - Static Property Access](../expressions/class-operations.md#static-property-access) for more information.
+
 ## The Property Namespace
 
 Properties and methods are in different namespaces. It's possible to have a method and a property with the same name.
@@ -83,7 +151,7 @@ class Counter {
 ```
 
 ::: warning
-Using the same name for a method and a property is confusing. We recommend you using different names.
+Using the same name for a method and a property can be confusing. We recommend you using different names.
 :::
 
 ```

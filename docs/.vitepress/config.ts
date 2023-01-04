@@ -59,6 +59,35 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Classes',
+        items: [
+          {
+            text: 'Introduction',
+            link: '/classes/introduction'
+          },
+          {
+            text: 'Constructors',
+            link: '/classes/constructors'
+          },
+          {
+            text: 'Properties',
+            link: '/classes/properties'
+          },
+          {
+            text: 'Methods',
+            link: '/classes/methods'
+          },
+          {
+            text: 'Constants',
+            link: '/classes/constants'
+          },
+          {
+            text: 'Inheritance',
+            link: '/classes/inheritance'
+          }
+        ]
+      },
+      {
         text: 'Statements',
         items: [
           {
@@ -175,23 +204,6 @@ export default defineConfig({
             text: 'Arrays',
             link: '/expressions/arrays'
           }
-        ]
-      },
-      {
-        text: 'Classes',
-        items: [
-          {
-            text: 'Introduction',
-            link: '/classes/introduction'
-          },
-          {
-            text: 'Methods',
-            link: '/classes/methods'
-          },
-          {
-            text: 'Properties',
-            link: '/classes/properties'
-          },
         ]
       },
       {
