@@ -47,7 +47,6 @@ if $condition1 {
 
 ::: warning
 Unlike PHP, Ara does not support one-line `if` statements.
-:::
 
 ```
 function example(bool $condition): void {
@@ -64,3 +63,4 @@ error[P0042]: unexpected identifier, expected `{`
 2 │     if ($condition) foo();
   │                     ^^^ unexpected identifier, expected `{`
 ```
+:::

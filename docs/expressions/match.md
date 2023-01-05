@@ -52,9 +52,9 @@ Example, the following code will result in a compiler error:
 
 ```
 enum Color {
-    Red,
-    Green,
-    Blue,
+    case Red;
+    case Green;
+    case Blue;
 }
 
 function get_color_name(Color $color): string {
