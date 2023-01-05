@@ -202,6 +202,10 @@ export default defineConfig({
             link: '/expressions/async-operations'
           },
           {
+            text: 'Range Operations',
+            link: '/expressions/range-operations'
+          },
+          {
             text: 'Match',
             link: '/expressions/match'
           },

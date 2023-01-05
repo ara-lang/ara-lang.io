@@ -1,45 +1,56 @@
 # Statements: Using
 
-The `using` statement is a control flow statement that is used to execute a block of code and automatically destroy the variables declared in the block of code when the block of code is finished executing.
+The `using` statement is a control flow statement that allows you to specify a block of code in which a resource or resources are used, and at the end of the block, the resources are disposed of automatically. This can be useful for resource management and to ensure that resources are properly cleaned up when they are no longer needed.
+
 
 ```
-using $file = File\open_read_only("example.txt") {
+using $file = File\open_read_only('example.txt') {
     // $file is present here
 }
 
-// $file is destroyed here
+// $file is disposed here
 ```
 
-::: info
-Variables declared inside the block of code are not accessible outside the block of code.
+::: tip
+Variables declared inside the `using` block are still accessible after the block has been exited.
 
 ```
-using $file = File\open_read_only("example.txt")  {
+using $file = File\open_read_only('example.txt')  {
     $content = $file->readAll();
-
-    // do something with $content
 }
 
-// $content is not accessible here
+// $content is still accessible here
 ```
 :::
 
-`using` also allows multiple variables to be declared and used in the block of code.
+::: info
+If an exception is thrown inside the `using` block, the variables declared inside the block will still be disposed of.
+
+```
+using $file = File\open_read_only('example.txt') {
+    throw new Exception("An exception was thrown");
+}
+
+// $file is disposed here, and the exception is thrown
+```
+:::
+
+You can also use the `using` statement to declare and use multiple variables in the same block.
 
 ```
 using $user = Users\by_id($user_id), $articles = Articles\by_user($user_id) {
     // $user and $articles are present here
 }
 
-// $user and $articles are destroyed here
+// $user and $articles are disposed here
 ```
 
-An `if` clause can be used to conditionally execute the block of code.
+You can use an `if` clause to conditionally execute the `using` block.
 
 ```
 using $user = Users\by_id($id) if $user is nonnull {
     // $user is present here
 }
 
-// $user is destroyed here
+// $user is disposed here
 ```
