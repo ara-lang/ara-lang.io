@@ -3,7 +3,7 @@
 A range operation is a way to create a range of integer values. There are six different types of range operations: [from](#from), [to](#to), [to inclusive](#to-inclusive), [between](#between), [between inclusive](#between-inclusive), and [full](#full).
 
 
-The range operation is way of constructing a [`Psl\Range\RangeInterface`](https://github.com/azjezz/psl/tree/next/src/Psl/Range) object, according to the following table:
+The range operation is way of constructing a [`Psl\Range\RangeInterface`](https://github.com/azjezz/psl/tree/next/src/Psl/Range#range) object, according to the following table:
 
 | Syntax        | Type                              | Range               |
 |---------------|-----------------------------------|---------------------|
@@ -17,7 +17,7 @@ The range operation is way of constructing a [`Psl\Range\RangeInterface`](https:
 The following operations are equivalent:
 
 ```
-$a = new Psl\Range\BetweenRange(1, 10, false);
+$a = new Psl\Range\between(1, 10, false);
 $b = 1..10;
 
 Psl\invariant($a == $b);
