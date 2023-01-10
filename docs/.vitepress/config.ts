@@ -265,7 +265,7 @@ export default defineConfig({
       },
       {
         icon: "discord",
-        link: "https://discord.gg/zRREHGhGAB",
+        link: "https://discord.gg/W36mEH4P",
       },
     ],
   },
