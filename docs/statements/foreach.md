@@ -15,3 +15,13 @@ foreach $iterable as $key => $value {
     // ...
 }
 ```
+
+In addition to its primary function of iterating over an iterable, the `foreach` statement also allows for the use of an optional `else` clause, which is executed when the value is empty:
+
+```
+foreach $iterable as $value {
+    // ...
+} else {
+    // executed when `$iterable` is empty
+}
+```
