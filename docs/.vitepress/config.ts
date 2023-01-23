@@ -268,5 +268,10 @@ export default defineConfig({
         link: "https://discord.gg/Z6UNf9tru7",
       },
     ],
+    algolia: {
+      appId: '4S02Z21F9E',
+      apiKey: '983b0e4c75e4186e178e875dd1a0bf18',
+      indexName: 'ara-lang'
+    }
   },
 });
