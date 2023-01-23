@@ -190,6 +190,10 @@ export default defineConfig({
             link: '/expressions/function-operations'
           },
           {
+            text: 'Functional Operations',
+            link: '/expressions/functional-operations'
+          },            
+          {
             text: 'Exception Operations',
             link: '/expressions/exception-operations'
           },
