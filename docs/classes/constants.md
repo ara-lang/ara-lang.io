@@ -5,7 +5,7 @@ A class can contain constants, which are similar to variables, except that their
 ```
 class Constants
 {
-    public const PI = 3.14;
+    public const float PI = 3.14;
 }
 ```
 
@@ -20,9 +20,9 @@ Constants can be declared as `public`, `protected` or `private`.
 ```
 class Constants
 {
-    public const PI = 3.14;
-    protected const E = 2.71;
-    private const GOLDEN_RATIO = 1.618;
+    public const float PI = 3.14;
+    protected const float E = 2.71;
+    private const float GOLDEN_RATIO = 1.618;
 }
 ```
 
@@ -33,6 +33,6 @@ Constants can be declared as `final`, which means that they cannot be overridden
 ```
 class Constants
 {
-    final public const PI = 3.14;
+    final public const float PI = 3.14;
 }
 ```
