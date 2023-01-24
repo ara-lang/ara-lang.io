@@ -15,7 +15,7 @@ use MyOtherNamespace\MyClass;
 
 type MyType = int;
 
-const MY_CONST = 1;
+const u8 MY_CONST = 1;
 
 function my_function(): void {
     $my_variable = 1;

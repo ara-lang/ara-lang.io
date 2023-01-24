@@ -4,8 +4,8 @@ A constant is a named value that cannot be changed.
 
 There are two types of constants:
 
-- namespace constant - A constant declared in a namespace.
-- class constant - A constant declared in a class, interface, or enum.
+- **namespace constant** - A constant declared in a namespace.
+- **class constant** - A constant declared in a class, interface, or enum.
 
 ## Namespace Constants
 
@@ -14,8 +14,12 @@ To declare a namespace constant, use the `const` keyword.
 ```
 namespace Foo;
 
-const MY_CONST = 1;
+const u8 MY_CONST = 1;
 ```
+
+::: info
+Constants must be defined with a type in Ara.
+:::
 
 To access a namespace constant, refer to it by its fully qualified name:
 
@@ -39,15 +43,15 @@ To declare a class constant, use the `const` keyword within a class, interface, 
 
 ```
 class MyClass {
-    const MY_CONST = 1;
+    const u8 MY_CONST = 1;
 }
 
 interface MyInterface {
-    const MY_CONST = 1;
+    const u8 MY_CONST = 1;
 }
 
 enum MyEnum {
-    const MY_CONST = 1;
+    const u8 MY_CONST = 1;
 }
 ```
 
@@ -66,10 +70,10 @@ Unlike namespace constants, class constants can have modifiers:
 
 ```
 class MyClass {
-    public const MY_CONST = 1;
-    protected const MY_CONST = 1;
-    private const MY_CONST = 1;
-    final const MY_CONST = 1;
+    public const u8 MY_CONST = 1;
+    protected const u8 MY_CONST = 1;
+    private const u8 MY_CONST = 1;
+    final const u8 MY_CONST = 1;
 }
 ```
 

@@ -14,14 +14,14 @@ When multiple files are in the same namespace, their declarations are merged tog
 // file1.ara
 namespace Foo;
 
-const MY_CONST = 1;
+const u8 MY_CONST = 1;
 ```
 
 ```
 // file2.ara
 namespace Foo;
 
-const MY_OTHER_CONST = 2;
+const u8 MY_OTHER_CONST = 2;
 ```
 
 ```
@@ -30,8 +30,8 @@ namespace Bar;
 
 use Foo;
 
-const MY_CONST = Foo\MY_CONST;
-const MY_OTHER_CONST = Foo\MY_OTHER_CONST;
+const u8 MY_CONST = Foo\MY_CONST;
+const u8 MY_OTHER_CONST = Foo\MY_OTHER_CONST;
 ```
 
 ## Root Namespace
@@ -39,7 +39,7 @@ const MY_OTHER_CONST = Foo\MY_OTHER_CONST;
 In the absence of a namespace declaration, the declarations are in the root namespace.
 
 ```
-const MY_CONST = 1;
+const int MY_CONST = 1;
 ```
 
 ## Nested Namespaces
@@ -57,7 +57,7 @@ Namespaces can be imported using the `use` keyword.
 ```
 use Foo;
 
-const MY_CONST = Foo\MY_CONST;
+const int MY_CONST = Foo\MY_CONST;
 ```
 
 ## Aliasing
@@ -69,7 +69,7 @@ namespace Foo;
 
 use Bar\Baz as Qux;
 
-const MY_CONST = Qux\MY_CONST;
+const int MY_CONST = Qux\MY_CONST;
 ```
 
 ## Reserved Namespaces

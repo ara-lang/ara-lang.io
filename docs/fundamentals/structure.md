@@ -24,7 +24,7 @@ use function MyOtherNamespace\my_other_function;
 
 use const MyOtherNamespace\MY_OTHER_CONST;
 
-const MY_CONST = 1;
+const int MY_CONST = 1;
 
 type MyType = int;
 
