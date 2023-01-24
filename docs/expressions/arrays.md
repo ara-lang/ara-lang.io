@@ -227,7 +227,7 @@ foreach $a as $index => $value {
 Unlike PHP, `$index`, and `$value` are not available after the `foreach` statement.
 :::
 
-### Dictionary
+## Dictionary
 
 Dictionaries are a way to group multiple key-value pairs into a single value. They are useful for returning multiple values of the same type from a function, or for passing multiple values to a function.
 
