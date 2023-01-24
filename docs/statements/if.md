@@ -2,6 +2,19 @@
 
 The `if` statement is used to conditionally execute a block of code if a condition is true.
 
+
+> <sub>**syntax**</sub>\
+> IfStatement **:**\
+> &nbsp;&nbsp;`if` *`Expression`* *`BlockStatement`* *`ElseIf`*<sup>**&#42;**</sup> *`Else`*<sup>**?**</sup>\
+> &nbsp;\
+> ElseIf **:**\
+> &nbsp;&nbsp;`elseif` *`Expression`* *`BlockStatement`*\
+> &nbsp;\
+> Else **:**\
+> &nbsp;&nbsp;`else` **(** *`BlockStatement`* **|** *`IfStatement`* **)**
+
+---
+
 ```
 if $condition {
     // ...
@@ -32,8 +45,6 @@ if $condition1 {
 
 ::: tip
 You can use the `elseif` keyword instead of `else if`.
-:::
-
 
 ```
 if $condition1 {
@@ -44,6 +55,8 @@ if $condition1 {
     // ...
 }
 ```
+
+:::
 
 ::: warning
 Unlike PHP, Ara does not support one-line `if` statements.

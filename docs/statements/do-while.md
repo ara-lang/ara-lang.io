@@ -2,10 +2,16 @@
 
 The `do while` statement is used to execute a block of code while a condition is true.
 
+> <sub>**syntax**</sub>\
+> DoWhileStatement **:**\
+> &nbsp;&nbsp;`do` *`BlockStatement`* `while` *`Expression`* `;`
+
+---
+
 ```
 do {
     // ...
-} while $condition
+} while $condition;
 ```
 
 Unlike the `while` statement, the `do while` statement will always execute at least once.
@@ -13,5 +19,5 @@ Unlike the `while` statement, the `do while` statement will always execute at le
 ```
 do {
     // ...
-} while false
+} while false;
 ```

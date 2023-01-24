@@ -1,6 +1,18 @@
-## Statements: Return
+# Statements: Return
 
-### Explicit Return
+> <sub>**syntax**</sub>\
+> ReturnStatement **:**\
+> &nbsp;&nbsp;*`ExplicitReturnStatement`* **|** *`ImplicitReturnStatement`*\
+> &nbsp;\
+> ExplicitReturnStatement **:**\
+> &nbsp;&nbsp;`return` *`Expression`*<sup>**?**</sup> `;`\
+> &nbsp;\
+> ImplicitReturnStatement **:**\
+> &nbsp;&nbsp;*`Expression`*
+
+---
+
+## Explicit Return
 
 The `return` statement is used to return a value from a function.
 
@@ -22,7 +34,7 @@ function example(): void {
 }
 ```
 
-### Implicit Return
+## Implicit Return
 
 A function can return implicitly by omitting the `return` keyword and the semicolon.
 

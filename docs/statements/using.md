@@ -2,6 +2,11 @@
 
 The `using` statement is a control flow statement that allows you to specify a block of code in which a resource or resources are used, and at the end of the block, the resources are disposed of automatically. This can be useful for resource management and to ensure that resources are properly cleaned up when they are no longer needed.
 
+> <sub>**syntax**</sub>\
+> UsingStatement **:**\
+> &nbsp;&nbsp;`using` (*`Variable`* `=` *`Expression`*)<sup>**+**</sup> (`if` *`Expression`*)<sup>**?**</sup> *`BlockStatement`*
+
+---
 
 ```
 using $file = File\open_read_only('example.txt') {

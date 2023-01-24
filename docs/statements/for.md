@@ -2,6 +2,24 @@
 
 The `for` statement is used to execute a block of code a specified number of times.
 
+> <sub>**syntax**</sub>\
+> ForStatement **:**\
+> &nbsp;&nbsp;`for` **(***`Iterator`* **|** **(** `(` *`Iterator`* `)` **)** **)** *`BlockStatement`*\
+> &nbsp;\
+> Iterator **:**\
+> &nbsp;&nbsp;*`Initializer`*<sup>**?**</sup> `;` *`Condition`*<sup>**?**</sup> `;` *`Increment`*<sup>**?**</sup>\
+> &nbsp;\
+> Initializer **:**\
+> &nbsp;&nbsp;*`Expression`* **|** (*`Expression`* `,` *`Initializer`*)\
+> &nbsp;\
+> Condition **:**\
+> &nbsp;&nbsp;*`Expression`* **|** (*`Expression`* `,` *`Condition`*)\
+> &nbsp;\
+> Increment **:**\
+> &nbsp;&nbsp;*`Expression`* **|** (*`Expression`* `,` *`Increment`*)
+
+---
+
 ```
 for $i = 0; $i < 10; $i = $i + 1 {
     // ...

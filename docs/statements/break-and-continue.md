@@ -2,6 +2,15 @@
 
 The `break` and `continue` statements are used to control the flow of a loop.
 
+> <sub>**syntax**</sub>\
+> BreakStatement **:**\
+> &nbsp;&nbsp;`break` *`LiteralIntegerExpression`*<sup>**?**</sup> `;`\
+> &nbsp;\
+> ContinueStatement **:**\
+> &nbsp;&nbsp;`continue` *`LiteralIntegerExpression`*<sup>**?**</sup> `;`
+
+---
+
 ## Break
 
 The `break` statement is used to exit a loop early.

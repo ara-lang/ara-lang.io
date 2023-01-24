@@ -2,6 +2,25 @@
 
 The `try-catch` statement is used to catch errors that occur in a block of code.
 
+
+> <sub>**syntax**</sub>\
+> TryStatement **:**\
+> &nbsp;&nbsp;`try` *`BlockStatement`* **(**\
+> &nbsp;&nbsp;&nbsp;&nbsp;**(** *`Catch`*<sup>**+**</sup> *`Finally`*<sup>**?**</sup> **)** **|**\
+> &nbsp;&nbsp;&nbsp;&nbsp;**(** *`Finally`* **)**\
+> &nbsp;&nbsp;**)**\
+> &nbsp;\
+> Catch **:**\
+> &nbsp;&nbsp;`catch` `(` *`CatchType`* *`Variable`*<sup>**?**</sup> `)` *`BlockStatement`*\
+> &nbsp;\
+> CatchType **:**\
+> &nbsp;&nbsp;*`Identifier`* **|** **(** *`Identifier`* `|` *`CatchType`* **)**\
+> &nbsp;\
+> Finally **:**\
+> &nbsp;&nbsp;`finally` *`BlockStatement`*
+
+---
+
 ```
 try {
     // ...
