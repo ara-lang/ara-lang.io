@@ -42,8 +42,6 @@ $closure = static function(): never {
 };
 ```
 
-In any of the examples above, you can see that we need much less code to write the functional expression.
-
 ## Pipe Operator
 
 The pipe operator `|>` is used to chain together multiple function calls in a readable manner. The left-hand side of the operator is evaluated and passed to the right-hand side and so on.
