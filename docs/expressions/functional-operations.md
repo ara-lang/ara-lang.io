@@ -4,33 +4,45 @@ Functional operations refer to a style of programming that emphasizes the use of
 
 ## Functional Expression
 
-A functional expression is a way of creating an anonymous function, which is a function without a name, that can be immediately invoked or passed as an argument to another function.
+A functional expression is a way of creating an anonymous function (also known as [Closure](https://www.php.net/manual/en/class.closure.php)) from any expression.
 
-For example:
+The resulting `Closure` will have the type of `Closure<(), T>` where `T` is the resulted value type of the expression.
 
-```
-$a = $(123);
-```
-
-This is the same as:
+Example:
 
 ```
-$a = static function(): int { return 123; };
+$a = 1;
+$b = 2;
+$c = 3;
+
+$closure = $($a + $b + $c);
+// same as:
+$closure = function() use($a, $b, $c): int {
+  return $a + $b + $c;
+};
 ```
 
-Another example:
-
-```
-$a = $($this);
-```
-
-Is the same as:
+If the inner expression is unreadable, `T` would be of type `void`.
 
 ``` 
-$a = function(): self { return $this; };
+$closure = $($this->counter++);
+// same as:
+$closure = function(): void {
+  $this->counter++;
+};
 ```
 
-In both examples, you can see that we need much less code to write the functional expression.
+If the inner expression is an [exit](exit.md#expressions-exit), or [throw](exception-operations.md#throwing-exceptions) operation, `T` would be of type `never`.
+
+```
+$closure = $(throw new Exception('...'));
+// same as:
+$closure = static function(): never {
+  throw new Exception('...');
+};
+```
+
+In any of the examples above, you can see that we need much less code to write the functional expression.
 
 ## Pipe Operator
 
@@ -45,11 +57,11 @@ $transform = Psl\Html\stripe_tags(...)
 $output = $transform("<b>Hello World!</b>"); // HELLO WORLD!
 ```
 
-Or combining *pipe operator* with a *functional expression* on the left-side:
+Or combining [pipe operator](#pipe-operator) with a [functional expression](#functional-expression) on the left-side:
 
 ```
 $hello_world = $("<b>Hello World!</b>")
-    |> Psl\Html\stripe_tags(...)
+    |> Psl\Html\strip_tags(...)
     |> Psl\Str\uppercase(...);
 
 $output = $hello_world(); // HELLO WORLD!
